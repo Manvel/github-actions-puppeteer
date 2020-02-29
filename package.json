@@ -1,0 +1,23 @@
+{
+  "name": "github-actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha puppeteer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manvel/testing-github-actions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manvel/testing-github-actions/issues"
+  },
+  "homepage": "https://github.com/Manvel/testing-github-actions#readme",
+  "dependencies": {
+    "mocha": "^7.1.0",
+    "puppeteer": "^2.1.1"
+  }
+}
