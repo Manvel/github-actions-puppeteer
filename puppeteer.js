@@ -6,7 +6,7 @@ let browser;
 describe("Test", () => {
   before(async () =>
   {
-    browser = await puppeteer.launch({headless: false});
+    browser = await puppeteer.launch({headless: false, args: ['--no-sandbox']});
   });
   it("testing", () =>
   {
