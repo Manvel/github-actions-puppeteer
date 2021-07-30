@@ -1,0 +1,24 @@
+name: Tests2
+
+on: 
+  schedule: 
+  - cron: '*/5 * * * *' # Once per day at 6am UTC
+
+jobs:
+  run-puppeteer:
+    name: Run puppeteer tests2
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      env:
+        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+
+    - name: Prepare modules
+      run: npm install
+
+    - name: Test Code
+      uses: mujo-code/puppeteer-headful@master
+      with:
+        args: npm test
