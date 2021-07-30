@@ -2,7 +2,7 @@ name: Tests
 
 on: 
   schedule: 
-  - cron: '30 * * * *' # Once per day at 6am UTC
+  - cron: '*/5 * * * *' # Once per day at 6am UTC
 
 jobs:
   run-puppeteer:
