@@ -3,7 +3,7 @@ name: Tests
 on: 
   workflow_dispatch:
   schedule: 
-  - cron: 10 * * * * # Once per day at 6am UTC
+  - cron: '20 * * * *' # Once per day at 6am UTC
 
 jobs:
   run-puppeteer:
