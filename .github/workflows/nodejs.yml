@@ -22,8 +22,8 @@ jobs:
       with:
         args: npm test
     
-  - name: Upload artifact
-    uses: actions/upload-artifact@v2
-    with:
-      name: my-artifact
-      path: failedTests
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: failedTests
