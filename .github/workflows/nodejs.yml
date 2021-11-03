@@ -11,13 +11,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup Node
       uses: actions/setup-node@v2
-      env:
-        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
 
-    - name: Prepare modules
-      run: npm install
-
+    - name: Prepare dependencies
+      run: sudo apt-get install xvfb && npm install
+    
     - name: Test Code
-      uses: mujo-code/puppeteer-headful@master
-      with:
-        args: npm test
+      run: xvfb-run npm test
